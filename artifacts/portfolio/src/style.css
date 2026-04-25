@@ -28,46 +28,64 @@ ul { list-style: none; }
 :root,
 :root[data-theme="dark"],
 body[data-theme="dark"] {
-  /* Core palette — exact spec */
-  --bg-color: #0f172a;            /* main background — dark navy */
-  --card-bg: #1e293b;             /* cards — solid, slightly elevated */
-  --text-color: #e5e7eb;          /* primary text */
-  --text-muted: #94a3b8;          /* muted / secondary text */
-  --secondary-text: #94a3b8;      /* alias matching spec */
-  --primary-color: #6366f1;       /* indigo — buttons, highlights */
-  --accent-color: #22d3ee;        /* cyan — links / hover */
-  --border-color: #334155;        /* slate-700 */
-
-  /* Derived tokens */
-  --bg-elev: #182338;             /* deeper than card, sits above bg */
-  --primary-strong: #4f46e5;
-  --secondary-color: #818cf8;
-  --card-border: var(--border-color);
-  --button-color: var(--primary-color);
+  /* Core palette — GitHub dark UI inspired */
+  --bg-color: #0d1117;            /* canvas — page background */
+  --bg-subtle: #010409;           /* deeper than canvas (footer / extreme depth) */
+  --card-bg: #161b22;             /* canvas-subtle — primary surface for cards */
+  --bg-elev: #21262d;             /* canvas-overlay — hover / elevated surfaces */
+  --text-color: #e6edf3;          /* fg-default */
+  --text-muted: #8b949e;          /* fg-muted */
+  --secondary-text: #8b949e;
+  --primary-color: #58a6ff;       /* accent-fg — links / primary blue */
+  --primary-strong: #1f6feb;      /* accent-emphasis — solid button blue */
+  --secondary-color: #a371f7;     /* purple highlight (commits/PRs vibe) */
+  --accent-color: #3fb950;        /* success green for accents */
+  --border-color: #30363d;        /* border-default — crisp 1px lines */
+  --border-muted: #21262d;        /* border-muted — subtler dividers */
+  --card-border: #30363d;
+  --button-color: #1f6feb;
   --button-text: #ffffff;
 
-  /* Soft shadows — gentle, never harsh */
-  --shadow-soft: 0 8px 24px -12px rgba(15, 23, 42, 0.55);
-  --shadow-strong: 0 24px 50px -22px rgba(15, 23, 42, 0.65);
+  /* Shadows — minimal, GitHub-style. Borders do the heavy lifting. */
+  --shadow-soft: 0 1px 0 rgba(255,255,255,0.03), 0 8px 24px -12px rgba(1, 4, 9, 0.85);
+  --shadow-strong: 0 1px 0 rgba(255,255,255,0.04), 0 16px 32px -16px rgba(1, 4, 9, 0.9);
 
-  /* Gradients */
-  --grad-1: linear-gradient(135deg, #6366f1 0%, #818cf8 50%, #22d3ee 100%);
-  --grad-soft: linear-gradient(135deg, rgba(99,102,241,.14), rgba(34,211,238,.10));
-  --hero-orb-1: rgba(99,102,241,.30);
-  --hero-orb-2: rgba(129,140,248,.25);
-  --hero-orb-3: rgba(34,211,238,.22);
-  --grid-line: rgba(51, 65, 85, 0.35);
-  --chip-bg: rgba(99,102,241,0.14);
-  --chip-text: #c7d2fe;
-  --bar-bg: rgba(51, 65, 85, 0.55);
-  --glass-blur: 14px;
-  --nav-bg: rgba(15,23,42,0.78);
-  --nav-border: var(--border-color);
-  --footer-bg: #0b1426;
-  --glow-color: rgba(99, 102, 241, 0.45);
-  --thumb-1: linear-gradient(135deg, #6366f1, #22d3ee);
-  --thumb-2: linear-gradient(135deg, #ec4899, #f59e0b);
-  --thumb-3: linear-gradient(135deg, #10b981, #6366f1);
+  /* Gradients — blue → purple, GitHub-y */
+  --grad-1: linear-gradient(135deg, #58a6ff 0%, #a371f7 100%);
+  --grad-soft: linear-gradient(135deg, rgba(88,166,255,.10), rgba(163,113,247,.08));
+  --hero-orb-1: rgba(88,166,255,.22);
+  --hero-orb-2: rgba(163,113,247,.18);
+  --hero-orb-3: rgba(63,185,80,.14);
+  --grid-line: rgba(48, 54, 61, 0.55);
+  --chip-bg: rgba(88,166,255,0.10);
+  --chip-text: #79c0ff;
+  --bar-bg: #21262d;
+  --glass-blur: 0px;              /* GitHub uses crisp solid panels, no glass */
+  --nav-bg: rgba(13, 17, 23, 0.85);
+  --nav-border: #30363d;
+  --footer-bg: #010409;
+  --glow-color: rgba(88, 166, 255, 0.45);
+  --thumb-1: linear-gradient(135deg, #1f6feb, #a371f7);
+  --thumb-2: linear-gradient(135deg, #db61a2, #e8895d);
+  --thumb-3: linear-gradient(135deg, #2da44e, #1f6feb);
+}
+
+/* GitHub-style crisp solid panels in dark mode — override the glassmorphism */
+:root[data-theme="dark"] .glass,
+body[data-theme="dark"] .glass,
+:root:not([data-theme="peacock"]) .glass {
+  background: var(--card-bg);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;            /* GitHub uses tighter radii */
+  box-shadow: var(--shadow-soft);
+}
+:root[data-theme="dark"] .glass:hover,
+body[data-theme="dark"] .glass:hover,
+:root:not([data-theme="peacock"]) .glass:hover {
+  border-color: #484f58;          /* border-default-emphasis on hover */
+  background: linear-gradient(180deg, var(--bg-elev), var(--card-bg));
 }
 
 :root[data-theme="peacock"],
