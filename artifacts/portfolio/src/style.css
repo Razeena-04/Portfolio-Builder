@@ -393,6 +393,62 @@ body[data-theme="peacock"] .grad-text {
   text-align: center;
   position: relative; z-index: 2;
 }
+/* Animated blob/gradient stage behind the profile photo */
+.photo-stage {
+  position: relative;
+  width: clamp(220px, 28vw, 290px);
+  height: clamp(220px, 28vw, 290px);
+  display: grid; place-items: center;
+  isolation: isolate;
+}
+.photo-stage .blob {
+  position: absolute; border-radius: 50%;
+  filter: blur(34px);
+  opacity: .75;
+  z-index: -1;
+  will-change: transform;
+}
+.blob-a {
+  width: 70%; height: 70%;
+  top: -8%; left: -10%;
+  background: var(--primary-color);
+  animation: blobMove 14s ease-in-out infinite;
+}
+.blob-b {
+  width: 60%; height: 60%;
+  bottom: -10%; right: -8%;
+  background: var(--secondary-color);
+  animation: blobMove 18s ease-in-out infinite reverse;
+  animation-delay: -4s;
+}
+.blob-c {
+  width: 55%; height: 55%;
+  bottom: 18%; left: 15%;
+  background: var(--accent-color);
+  animation: blobMove 12s ease-in-out infinite;
+  animation-delay: -7s;
+  opacity: .55;
+}
+.photo-grid {
+  position: absolute; inset: 0;
+  z-index: -1;
+  border-radius: 50%;
+  background:
+    radial-gradient(closest-side, transparent 60%, var(--bg-color) 100%),
+    conic-gradient(from 0deg, var(--primary-color), var(--secondary-color), var(--accent-color), var(--primary-color));
+  opacity: .12;
+  animation: gridSpin 22s linear infinite;
+}
+@keyframes blobMove {
+  0%   { transform: translate(0, 0) scale(1); }
+  33%  { transform: translate(14px, -10px) scale(1.08); }
+  66%  { transform: translate(-12px, 12px) scale(.96); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+@keyframes gridSpin {
+  to { transform: rotate(360deg); }
+}
+
 .profile-ring {
   width: clamp(180px, 22vw, 220px);
   height: clamp(180px, 22vw, 220px);
