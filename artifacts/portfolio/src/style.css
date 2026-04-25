@@ -656,36 +656,105 @@ body[data-theme="peacock"] .profile-ring::before { opacity: .55; }
 }
 .project-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-strong); }
 .project-thumb {
-  height: 180px;
+  height: 200px;
   display: grid; place-items: center;
   font-size: 56px; color: white;
   position: relative;
+  overflow: hidden;
+}
+.project-thumb img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .6s cubic-bezier(.2,.7,.2,1), filter .35s ease;
 }
 .project-thumb::after {
   content: ""; position: absolute; inset: 0;
-  background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,.18));
+  background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,.30));
+  pointer-events: none;
 }
 .thumb-1 { background: var(--thumb-1); }
 .thumb-2 { background: var(--thumb-2); }
 .thumb-3 { background: var(--thumb-3); }
 
+/* Hover overlay with action buttons */
+.project-overlay {
+  position: absolute; inset: 0;
+  display: flex; gap: 10px;
+  align-items: center; justify-content: center;
+  background: linear-gradient(180deg, rgba(15, 18, 35, .65), rgba(15, 18, 35, .85));
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  opacity: 0;
+  transition: opacity .35s ease;
+  z-index: 2;
+  padding: 16px;
+  flex-wrap: wrap;
+}
+.project-card:hover .project-overlay,
+.project-card:focus-within .project-overlay { opacity: 1; }
+.project-card:hover .project-thumb img { transform: scale(1.08); filter: blur(2px); }
+
+.overlay-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 13.5px; font-weight: 600;
+  background: rgba(255,255,255,.95);
+  color: #111;
+  text-decoration: none;
+  transform: translateY(8px);
+  opacity: 0;
+  transition: transform .35s ease, opacity .35s ease, background .25s ease;
+  box-shadow: 0 8px 24px -10px rgba(0,0,0,.4);
+}
+.overlay-btn:nth-child(2) { transition-delay: .06s; }
+.project-card:hover .overlay-btn,
+.project-card:focus-within .overlay-btn { transform: translateY(0); opacity: 1; }
+.overlay-btn:hover { background: var(--primary-color); color: #fff; }
+.overlay-btn--disabled {
+  background: rgba(255,255,255,.18);
+  color: rgba(255,255,255,.7);
+  cursor: not-allowed;
+  border: 1px dashed rgba(255,255,255,.35);
+}
+.overlay-btn--disabled:hover { background: rgba(255,255,255,.18); color: rgba(255,255,255,.7); }
+
 .project-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
 .project-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
 .project-tags span {
-  font-size: 11px; padding: 4px 10px; border-radius: 999px;
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 11.5px; padding: 5px 11px; border-radius: 999px;
   background: var(--chip-bg); color: var(--chip-text);
-  font-family: 'JetBrains Mono', monospace; font-weight: 500;
+  font-family: 'JetBrains Mono', monospace; font-weight: 600;
+  border: 1px solid var(--border-color);
 }
+.project-tags span i { font-size: 12px; opacity: .85; }
 .project-body h3 { font-family: 'Space Grotesk', sans-serif; font-size: 22px; margin-bottom: 10px; }
-.project-body p { color: var(--text-muted); font-size: 14.5px; flex: 1; }
-.project-actions { display: flex; gap: 16px; margin-top: 20px; }
+.project-body p { color: var(--text-muted); font-size: 14.5px; flex: 1; line-height: 1.65; }
+.project-body p strong { color: var(--text-color); font-weight: 600; }
+.project-actions { display: flex; gap: 16px; margin-top: 20px; flex-wrap: wrap; }
 .btn-link {
   display: inline-flex; align-items: center; gap: 6px;
   font-size: 14px; font-weight: 600;
   color: var(--primary-color);
   transition: gap .25s ease, color .25s ease;
+  cursor: pointer;
 }
 .btn-link:hover { gap: 10px; color: var(--secondary-color); }
+.btn-link--disabled {
+  color: var(--text-muted);
+  cursor: not-allowed;
+  opacity: .7;
+}
+.btn-link--disabled:hover { gap: 6px; color: var(--text-muted); }
+
+@media (hover: none) {
+  /* Always show overlay on touch devices since hover doesn't exist */
+  .project-overlay { opacity: 1; background: linear-gradient(180deg, transparent 35%, rgba(15,18,35,.85)); }
+  .overlay-btn { transform: translateY(0); opacity: 1; }
+}
 
 /* ---------- Timeline ---------- */
 .timeline { position: relative; max-width: 820px; margin-inline: auto; padding-left: 32px; }

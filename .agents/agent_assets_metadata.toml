@@ -1,0 +1,20 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "c-BmIXvtSWK88KvOEoey6"
+uri = "file://artifacts/portfolio/public/projects/goalsplit.png"
+type = "image"
+title = "ai task decomposition"
+
+[[generated]]
+id = "IKXdMx2OSZNMLFY_anx6T"
+uri = "file://artifacts/portfolio/public/projects/freelancer.png"
+type = "image"
+title = "earnings dashboard charts"
+
+[[generated]]
+id = "eqWLPZ0YjXo9W2UxBHfIS"
+uri = "file://artifacts/portfolio/public/projects/school.png"
+type = "image"
+title = "java mvc school console"
