@@ -28,46 +28,46 @@ ul { list-style: none; }
 :root,
 :root[data-theme="dark"],
 body[data-theme="dark"] {
-  /* Core palette — GitHub dark UI inspired */
-  --bg-color: #0d1117;            /* canvas — page background */
-  --bg-subtle: #010409;           /* deeper than canvas (footer / extreme depth) */
-  --card-bg: #161b22;             /* canvas-subtle — primary surface for cards */
-  --bg-elev: #21262d;             /* canvas-overlay — hover / elevated surfaces */
-  --text-color: #e6edf3;          /* fg-default */
-  --text-muted: #8b949e;          /* fg-muted */
-  --secondary-text: #8b949e;
-  --primary-color: #58a6ff;       /* accent-fg — links / primary blue */
-  --primary-strong: #1f6feb;      /* accent-emphasis — solid button blue */
-  --secondary-color: #a371f7;     /* purple highlight (commits/PRs vibe) */
-  --accent-color: #3fb950;        /* success green for accents */
-  --border-color: #30363d;        /* border-default — crisp 1px lines */
-  --border-muted: #21262d;        /* border-muted — subtler dividers */
-  --card-border: #30363d;
-  --button-color: #1f6feb;
-  --button-text: #ffffff;
+  /* Core palette — premium near-black */
+  --bg-color: #0a0a0a;            /* main background — near black, smooth */
+  --bg-subtle: #050505;           /* deeper than canvas (footer / extreme depth) */
+  --card-bg: #111111;             /* cards — slightly lifted from bg */
+  --bg-elev: #161616;              /* hover / elevated surfaces */
+  --text-color: #f5f5f5;          /* primary text */
+  --text-muted: #a1a1aa;          /* muted / secondary text */
+  --secondary-text: #a1a1aa;
+  --primary-color: #22c55e;       /* green accent — buttons & highlights */
+  --primary-strong: #16a34a;      /* solid hover green */
+  --secondary-color: #38bdf8;     /* secondary blue highlight */
+  --accent-color: #38bdf8;        /* links / hover */
+  --border-color: #1f2937;        /* subtle slate border */
+  --border-muted: #141a23;
+  --card-border: #1f2937;
+  --button-color: #22c55e;
+  --button-text: #04140a;
 
-  /* Shadows — minimal, GitHub-style. Borders do the heavy lifting. */
-  --shadow-soft: 0 1px 0 rgba(255,255,255,0.03), 0 8px 24px -12px rgba(1, 4, 9, 0.85);
-  --shadow-strong: 0 1px 0 rgba(255,255,255,0.04), 0 16px 32px -16px rgba(1, 4, 9, 0.9);
+  /* Shadows — subtle; borders do the heavy lifting */
+  --shadow-soft: 0 1px 0 rgba(255,255,255,0.03), 0 10px 24px -14px rgba(0, 0, 0, 0.85);
+  --shadow-strong: 0 1px 0 rgba(255,255,255,0.04), 0 18px 36px -18px rgba(0, 0, 0, 0.9);
 
-  /* Gradients — blue → purple, GitHub-y */
-  --grad-1: linear-gradient(135deg, #58a6ff 0%, #a371f7 100%);
-  --grad-soft: linear-gradient(135deg, rgba(88,166,255,.10), rgba(163,113,247,.08));
-  --hero-orb-1: rgba(88,166,255,.22);
-  --hero-orb-2: rgba(163,113,247,.18);
-  --hero-orb-3: rgba(63,185,80,.14);
-  --grid-line: rgba(48, 54, 61, 0.55);
-  --chip-bg: rgba(88,166,255,0.10);
-  --chip-text: #79c0ff;
-  --bar-bg: #21262d;
-  --glass-blur: 0px;              /* GitHub uses crisp solid panels, no glass */
-  --nav-bg: rgba(13, 17, 23, 0.85);
-  --nav-border: #30363d;
-  --footer-bg: #010409;
-  --glow-color: rgba(88, 166, 255, 0.45);
-  --thumb-1: linear-gradient(135deg, #1f6feb, #a371f7);
-  --thumb-2: linear-gradient(135deg, #db61a2, #e8895d);
-  --thumb-3: linear-gradient(135deg, #2da44e, #1f6feb);
+  /* Gradients — green → blue */
+  --grad-1: linear-gradient(135deg, #22c55e 0%, #38bdf8 100%);
+  --grad-soft: linear-gradient(135deg, rgba(34,197,94,.10), rgba(56,189,248,.08));
+  --hero-orb-1: rgba(34,197,94,.22);
+  --hero-orb-2: rgba(56,189,248,.18);
+  --hero-orb-3: rgba(34,197,94,.12);
+  --grid-line: rgba(31, 41, 55, 0.55);
+  --chip-bg: rgba(34,197,94,0.10);
+  --chip-text: #86efac;
+  --bar-bg: #1a1a1a;
+  --glass-blur: 0px;              /* solid premium panels, no glass */
+  --nav-bg: rgba(10, 10, 10, 0.85);
+  --nav-border: #1f2937;
+  --footer-bg: #050505;
+  --glow-color: rgba(34, 197, 94, 0.45);
+  --thumb-1: linear-gradient(135deg, #22c55e, #38bdf8);
+  --thumb-2: linear-gradient(135deg, #ec4899, #f59e0b);
+  --thumb-3: linear-gradient(135deg, #38bdf8, #22c55e);
 }
 
 /* GitHub-style crisp solid panels in dark mode — override the glassmorphism */
