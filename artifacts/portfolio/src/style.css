@@ -394,20 +394,68 @@ body[data-theme="peacock"] .grad-text {
   position: relative; z-index: 2;
 }
 .profile-ring {
-  width: 140px; height: 140px; border-radius: 50%;
-  padding: 4px;
+  width: clamp(180px, 22vw, 220px);
+  height: clamp(180px, 22vw, 220px);
+  border-radius: 50%;
+  padding: 5px;
   background: var(--grad-1);
   display: grid; place-items: center;
-  box-shadow: var(--shadow-strong);
+  position: relative;
+  box-shadow:
+    0 18px 40px -14px rgba(0,0,0,.30),
+    0 0 0 6px var(--chip-bg);
+  animation:
+    photoFloat 6s ease-in-out infinite,
+    photoFadeIn .9s ease-out both;
+  transition: transform .4s ease, box-shadow .4s ease;
 }
+.profile-ring::before {
+  content: "";
+  position: absolute; inset: -8px;
+  border-radius: 50%;
+  background: var(--grad-1);
+  filter: blur(18px); opacity: .35; z-index: -1;
+  transition: opacity .4s ease, filter .4s ease;
+}
+.profile-ring:hover { transform: scale(1.04); }
+.profile-ring:hover::before { opacity: .55; filter: blur(22px); }
+
+/* Stronger glow in Peacock theme */
+:root[data-theme="peacock"] .profile-ring,
+body[data-theme="peacock"] .profile-ring {
+  box-shadow:
+    0 18px 40px -14px rgba(0, 206, 201, .55),
+    0 0 0 6px rgba(0, 206, 201, .15);
+}
+:root[data-theme="peacock"] .profile-ring::before,
+body[data-theme="peacock"] .profile-ring::before { opacity: .55; }
+
 .profile-photo {
   width: 100%; height: 100%; border-radius: 50%;
   background: var(--bg-elev);
   display: grid; place-items: center;
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 44px; font-weight: 700;
-  color: var(--text-color);
-  letter-spacing: -0.04em;
+  overflow: hidden;
+  position: relative;
+}
+.profile-photo img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform .6s cubic-bezier(.2,.7,.2,1);
+}
+.profile-ring:hover .profile-photo img { transform: scale(1.08); }
+
+@keyframes photoFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes photoFadeIn {
+  from { opacity: 0; transform: translateY(20px) scale(.92); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .profile-ring { animation: none; }
 }
 .profile-meta { margin-top: 22px; }
 .profile-name { font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700; }
