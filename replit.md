@@ -16,7 +16,7 @@ Built as a single-page vanilla **HTML / CSS / JavaScript** site (no UI framework
 
 ## Portfolio features
 
-- 3 themes — Light (default), Dark, Peacock Green — toggled from the navbar dropdown and persisted in `localStorage`
+- 2 themes — Dark (default, indigo accent) and Peacock Blue — toggled from the navbar dropdown and persisted in `localStorage`
 - Glassmorphism cards, smooth scroll, sticky navbar with active-link highlighting
 - Animated reveal on scroll, animated skill bars, typewriter hero subtitle
 - Project / experience / certification sections built from real data

@@ -1,6 +1,6 @@
 /* =========================================================
    Razeena R — Portfolio Script
-   - Theme switcher (light / dark / peacock) with localStorage
+   - Theme switcher (dark / peacock) with localStorage
    - Smooth scroll active nav link
    - Reveal-on-scroll animation
    - Typewriter hero subtitle
@@ -11,17 +11,20 @@
 
 (() => {
   /* ---------- THEME SWITCHER ---------- */
-  const THEMES = ["light", "dark", "peacock"];
+  const THEMES = ["dark", "peacock"];
   const STORAGE_KEY = "razeena.portfolio.theme";
+  const DEFAULT_THEME = "dark";
 
   const applyTheme = (theme) => {
-    if (!THEMES.includes(theme)) theme = "light";
+    if (!THEMES.includes(theme)) theme = DEFAULT_THEME;
     document.documentElement.setAttribute("data-theme", theme);
     document.body.setAttribute("data-theme", theme);
     localStorage.setItem(STORAGE_KEY, theme);
   };
 
-  const savedTheme = localStorage.getItem(STORAGE_KEY) || "light";
+  // Migrate any old "light" preference to dark, then apply.
+  const stored = localStorage.getItem(STORAGE_KEY);
+  const savedTheme = THEMES.includes(stored) ? stored : DEFAULT_THEME;
   applyTheme(savedTheme);
 
   const themeSwitcher = document.getElementById("themeSwitcher");
