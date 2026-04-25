@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Razeena R — AI & Data Science Student | Full Stack Developer. Building AI-powered applications and data-driven solutions." />
+    <title>Razeena R — AI & Data Science | Full Stack Developer</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body data-theme="light">
+    <!-- ============== NAVBAR ============== -->
+    <header class="navbar" id="navbar">
+      <div class="nav-inner">
+        <a href="#hero" class="nav-logo">
+          <span class="logo-mark">R</span>
+          <span class="logo-text">Razeena<span class="logo-dot">.</span></span>
+        </a>
+
+        <nav class="nav-links" id="navLinks">
+          <a href="#about" class="nav-link">About</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#experience" class="nav-link">Experience</a>
+          <a href="#certifications" class="nav-link">Certifications</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <!-- Theme switcher -->
+          <div class="theme-switcher" id="themeSwitcher">
+            <button class="theme-btn" id="themeBtn" aria-label="Switch theme">
+              <i class="fa-solid fa-palette"></i>
+              <span class="theme-label">Theme</span>
+              <i class="fa-solid fa-chevron-down chev"></i>
+            </button>
+            <ul class="theme-menu" id="themeMenu" role="menu">
+              <li>
+                <button data-theme-set="light" role="menuitem">
+                  <i class="fa-solid fa-sun"></i> Light
+                </button>
+              </li>
+              <li>
+                <button data-theme-set="dark" role="menuitem">
+                  <i class="fa-solid fa-moon"></i> Dark
+                </button>
+              </li>
+              <li>
+                <button data-theme-set="peacock" role="menuitem">
+                  <i class="fa-solid fa-feather"></i> Peacock Green
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <button class="hamburger" id="hamburger" aria-label="Open menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ============== HERO ============== -->
+      <section class="hero" id="hero">
+        <div class="hero-bg">
+          <div class="orb orb-1"></div>
+          <div class="orb orb-2"></div>
+          <div class="orb orb-3"></div>
+          <div class="grid-overlay"></div>
+        </div>
+
+        <div class="container hero-inner">
+          <div class="hero-text reveal">
+            <span class="eyebrow">
+              <span class="dot-pulse"></span>
+              Available for opportunities
+            </span>
+            <h1 class="hero-title">
+              Hi, I'm <span class="grad-text">Razeena R</span>
+            </h1>
+            <h2 class="hero-subtitle">
+              <span id="typed"></span><span class="caret">|</span>
+            </h2>
+            <p class="hero-tagline">
+              Building AI-powered applications and data-driven solutions —
+              turning complex problems into clean, intuitive software.
+            </p>
+
+            <div class="hero-cta">
+              <a href="#projects" class="btn btn-primary">
+                <i class="fa-solid fa-folder-open"></i> View Projects
+              </a>
+              <a href="#" class="btn btn-ghost" id="downloadResume">
+                <i class="fa-solid fa-download"></i> Download Resume
+              </a>
+            </div>
+
+            <div class="hero-socials">
+              <a href="https://github.com/Razeena-04" target="_blank" rel="noreferrer" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://linkedin.com/in/razeena-r-4400a32aa/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="https://hackerrank.com/profile/razeena_aids" target="_blank" rel="noreferrer" aria-label="HackerRank">
+                <i class="fa-brands fa-hackerrank"></i>
+              </a>
+              <a href="mailto:razeena.aids@gmail.com" aria-label="Email">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal">
+            <div class="profile-card glass">
+              <div class="profile-ring">
+                <div class="profile-photo">
+                  <span>RR</span>
+                </div>
+              </div>
+              <div class="profile-meta">
+                <p class="profile-name">Razeena R</p>
+                <p class="profile-role">AI & Data Science · Full Stack Dev</p>
+                <p class="profile-loc">
+                  <i class="fa-solid fa-location-dot"></i> Tenkasi, Tamil Nadu, India
+                </p>
+              </div>
+
+              <div class="stat-row">
+                <div class="stat">
+                  <span class="stat-num">8.41</span>
+                  <span class="stat-label">CGPA</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-num">10+</span>
+                  <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-num">2</span>
+                  <span class="stat-label">Internships</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="float-tag tag-1">
+              <i class="fa-brands fa-python"></i> Python
+            </div>
+            <div class="float-tag tag-2">
+              <i class="fa-solid fa-brain"></i> AI / ML
+            </div>
+            <div class="float-tag tag-3">
+              <i class="fa-solid fa-code"></i> Full Stack
+            </div>
+          </div>
+        </div>
+
+        <a href="#about" class="scroll-cue" aria-label="Scroll down">
+          <span></span>
+        </a>
+      </section>
+
+      <!-- ============== ABOUT ============== -->
+      <section class="section" id="about">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="kicker">01 — About</span>
+            <h2 class="section-title">A bit about me</h2>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-text reveal">
+              <p>
+                I'm a <strong>Data Science undergraduate</strong> at Panimalar
+                Engineering College, Chennai, with a deep curiosity for how
+                intelligent systems can solve real-world problems. My focus is
+                on building <strong>AI-powered web applications</strong> that
+                are both useful and beautifully crafted.
+              </p>
+              <p>
+                I enjoy working across the stack — wrangling data with
+                <strong>Python &amp; Pandas</strong>, building backends with
+                <strong>Flask</strong>, and crafting interfaces with modern web
+                technologies. I'm endlessly drawn to clean architecture,
+                thoughtful UX, and the moment when a complex problem clicks
+                into a simple solution.
+              </p>
+
+              <ul class="info-list">
+                <li>
+                  <i class="fa-solid fa-graduation-cap"></i>
+                  <div>
+                    <strong>B.Tech in AI &amp; Data Science</strong>
+                    <span>Panimalar Engineering College · 2023 – 2027</span>
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-location-dot"></i>
+                  <div>
+                    <strong>Based in Tenkasi</strong>
+                    <span>Tamil Nadu, India</span>
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-bullseye"></i>
+                  <div>
+                    <strong>Currently exploring</strong>
+                    <span>LLM apps, Flask APIs, and cloud deployments</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="about-card glass reveal">
+              <div class="about-card-head">
+                <i class="fa-solid fa-rocket"></i>
+                <h3>What I'm working on</h3>
+              </div>
+              <ul>
+                <li>
+                  <span class="bullet"></span>
+                  Shipping <strong>GoalSplit AI</strong> — an AI-powered task
+                  decomposition tool with Flask + OpenAI.
+                </li>
+                <li>
+                  <span class="bullet"></span>
+                  Sharpening my full-stack skills with React, JavaScript, and
+                  Firebase.
+                </li>
+                <li>
+                  <span class="bullet"></span>
+                  Diving deeper into data engineering and AWS deployments.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============== SKILLS ============== -->
+      <section class="section section-alt" id="skills">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="kicker">02 — Skills</span>
+            <h2 class="section-title">Things I work with</h2>
+          </div>
+
+          <div class="skills-grid">
+            <div class="skill-card glass reveal">
+              <div class="skill-card-head">
+                <i class="fa-solid fa-code"></i>
+                <h3>Languages</h3>
+              </div>
+              <div class="skill-list">
+                <div class="skill">
+                  <div class="skill-meta"><span>Python</span><span>90%</span></div>
+                  <div class="bar"><span style="--w:90%"></span></div>
+                </div>
+                <div class="skill">
+                  <div class="skill-meta"><span>Java</span><span>80%</span></div>
+                  <div class="bar"><span style="--w:80%"></span></div>
+                </div>
+                <div class="skill">
+                  <div class="skill-meta"><span>SQL</span><span>78%</span></div>
+                  <div class="bar"><span style="--w:78%"></span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-card glass reveal">
+              <div class="skill-card-head">
+                <i class="fa-solid fa-globe"></i>
+                <h3>Web</h3>
+              </div>
+              <div class="skill-list">
+                <div class="skill">
+                  <div class="skill-meta"><span>HTML5</span><span>92%</span></div>
+                  <div class="bar"><span style="--w:92%"></span></div>
+                </div>
+                <div class="skill">
+                  <div class="skill-meta"><span>CSS3</span><span>88%</span></div>
+                  <div class="bar"><span style="--w:88%"></span></div>
+                </div>
+                <div class="skill">
+                  <div class="skill-meta"><span>JavaScript</span><span>85%</span></div>
+                  <div class="bar"><span style="--w:85%"></span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-card glass reveal">
+              <div class="skill-card-head">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                <h3>Tools &amp; Platforms</h3>
+              </div>
+              <div class="chip-list">
+                <span class="chip"><i class="fa-brands fa-github"></i> GitHub</span>
+                <span class="chip"><i class="fa-solid fa-code"></i> VS Code</span>
+                <span class="chip"><i class="fa-solid fa-book"></i> Jupyter</span>
+                <span class="chip"><i class="fa-brands fa-aws"></i> AWS</span>
+                <span class="chip"><i class="fa-brands fa-react"></i> React</span>
+                <span class="chip"><i class="fa-solid fa-fire"></i> Firebase</span>
+                <span class="chip"><i class="fa-solid fa-flask"></i> Flask</span>
+                <span class="chip"><i class="fa-solid fa-chart-line"></i> Pandas</span>
+              </div>
+            </div>
+
+            <div class="skill-card glass reveal">
+              <div class="skill-card-head">
+                <i class="fa-solid fa-lightbulb"></i>
+                <h3>Core Concepts</h3>
+              </div>
+              <div class="chip-list">
+                <span class="chip">OOP</span>
+                <span class="chip">Data Structures</span>
+                <span class="chip">Algorithms</span>
+                <span class="chip">REST APIs</span>
+                <span class="chip">MVC Architecture</span>
+                <span class="chip">Data Cleaning</span>
+                <span class="chip">Version Control</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============== PROJECTS ============== -->
+      <section class="section" id="projects">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="kicker">03 — Projects</span>
+            <h2 class="section-title">Selected work</h2>
+          </div>
+
+          <div class="projects-grid">
+            <article class="project-card glass reveal">
+              <div class="project-thumb thumb-1">
+                <i class="fa-solid fa-bullseye"></i>
+              </div>
+              <div class="project-body">
+                <div class="project-tags">
+                  <span>Flask</span><span>OpenAI API</span><span>Python</span>
+                </div>
+                <h3>GoalSplit AI</h3>
+                <p>
+                  An AI-powered task decomposition system that breaks complex
+                  goals into structured, actionable steps. Built with Flask
+                  and the OpenAI API, with real-time progress tracking and a
+                  user-centric design.
+                </p>
+                <div class="project-actions">
+                  <a href="https://github.com/Razeena-04/GoalSplit-AI" target="_blank" rel="noreferrer" class="btn-link">
+                    <i class="fa-brands fa-github"></i> Source
+                  </a>
+                  <a href="https://github.com/Razeena-04/GoalSplit-AI" target="_blank" rel="noreferrer" class="btn-link">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Details
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card glass reveal">
+              <div class="project-thumb thumb-2">
+                <i class="fa-solid fa-chart-pie"></i>
+              </div>
+              <div class="project-body">
+                <div class="project-tags">
+                  <span>Chart.js</span><span>JavaScript</span><span>LocalStorage</span>
+                </div>
+                <h3>Freelancer Dashboard</h3>
+                <p>
+                  A comprehensive dashboard for freelancers to track earnings
+                  and project timelines. Uses Chart.js for dynamic
+                  visualizations and Local Storage for fast, lag-free
+                  client-side data handling.
+                </p>
+                <div class="project-actions">
+                  <a href="https://github.com/Razeena-04/freelancer-dashboard" target="_blank" rel="noreferrer" class="btn-link">
+                    <i class="fa-brands fa-github"></i> Source
+                  </a>
+                  <a href="https://github.com/Razeena-04/freelancer-dashboard" target="_blank" rel="noreferrer" class="btn-link">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Details
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card glass reveal">
+              <div class="project-thumb thumb-3">
+                <i class="fa-solid fa-school"></i>
+              </div>
+              <div class="project-body">
+                <div class="project-tags">
+                  <span>Java</span><span>OOP</span><span>MVC</span>
+                </div>
+                <h3>School Management System</h3>
+                <p>
+                  A Java console application built on the MVC architecture,
+                  used to manage students, teachers, and classes with clean
+                  separation of concerns and robust object-oriented design.
+                </p>
+                <div class="project-actions">
+                  <a href="https://github.com/Razeena-04/SchoolManagementSystem" target="_blank" rel="noreferrer" class="btn-link">
+                    <i class="fa-brands fa-github"></i> Source
+                  </a>
+                  <a href="https://github.com/Razeena-04/SchoolManagementSystem" target="_blank" rel="noreferrer" class="btn-link">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Details
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============== EXPERIENCE / INTERNSHIPS ============== -->
+      <section class="section section-alt" id="experience">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="kicker">04 — Experience</span>
+            <h2 class="section-title">Internships</h2>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline-item reveal">
+              <div class="timeline-dot"></div>
+              <div class="timeline-card glass">
+                <div class="timeline-meta">
+                  <span class="role-pill">Data Science Intern</span>
+                  <span class="when">Jun 2025 — Jul 2025</span>
+                </div>
+                <h3>VCODEZ</h3>
+                <ul>
+                  <li>
+                    Analyzed real-time datasets using Python &amp; Pandas,
+                    improving data-driven decision making.
+                  </li>
+                  <li>
+                    Optimized data cleaning pipelines, reducing processing
+                    time by ~30%.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item reveal">
+              <div class="timeline-dot"></div>
+              <div class="timeline-card glass">
+                <div class="timeline-meta">
+                  <span class="role-pill">Web Development Intern</span>
+                  <span class="when">Feb 2025 — Apr 2025</span>
+                </div>
+                <h3>Robowaves</h3>
+                <ul>
+                  <li>
+                    Built responsive web applications using React.js,
+                    JavaScript, and Firebase.
+                  </li>
+                  <li>
+                    Handled application deployment and secure backend data
+                    storage.
+                  </li>
+                  <li>
+                    Gained hands-on experience in software industry standards
+                    and team collaboration.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============== CERTIFICATIONS + ACHIEVEMENTS ============== -->
+      <section class="section" id="certifications">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="kicker">05 — Recognition</span>
+            <h2 class="section-title">Certifications &amp; Achievements</h2>
+          </div>
+
+          <div class="cert-wrap">
+            <div class="cert-col reveal">
+              <h3 class="cert-col-title">
+                <i class="fa-solid fa-certificate"></i> Certifications
+              </h3>
+              <div class="cert-list">
+                <div class="cert-item glass">
+                  <div class="cert-icon"><i class="fa-solid fa-database"></i></div>
+                  <div>
+                    <strong>Infosys Springboard — Data Science Foundation</strong>
+                    <span>Nov 2025</span>
+                  </div>
+                </div>
+                <div class="cert-item glass">
+                  <div class="cert-icon"><i class="fa-solid fa-code"></i></div>
+                  <div>
+                    <strong>Infosys Springboard — Front End Web Developer</strong>
+                    <span>Nov 2025</span>
+                  </div>
+                </div>
+                <div class="cert-item glass">
+                  <div class="cert-icon"><i class="fa-brands fa-java"></i></div>
+                  <div>
+                    <strong>Infosys Springboard — Java Foundation</strong>
+                    <span>Mar 2026</span>
+                  </div>
+                </div>
+                <div class="cert-item glass">
+                  <div class="cert-icon"><i class="fa-brands fa-python"></i></div>
+                  <div>
+                    <strong>NPTEL — Python for Data Science (IIT Madras)</strong>
+                    <span>Elite · 2025</span>
+                  </div>
+                </div>
+                <div class="cert-item glass">
+                  <div class="cert-icon"><i class="fa-solid fa-language"></i></div>
+                  <div>
+                    <strong>British Council — English Proficiency (CEFR B1)</strong>
+                    <span>2024</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="cert-col reveal">
+              <h3 class="cert-col-title">
+                <i class="fa-solid fa-trophy"></i> Achievements
+              </h3>
+              <div class="cert-list">
+                <div class="cert-item glass">
+                  <div class="cert-icon"><i class="fa-solid fa-medal"></i></div>
+                  <div>
+                    <strong>All India Rank — ICAT Examination</strong>
+                    <span>National-level recognition</span>
+                  </div>
+                </div>
+                <div class="cert-item glass">
+                  <div class="cert-icon"><i class="fa-solid fa-microphone-lines"></i></div>
+                  <div>
+                    <strong>Paper Presentation — ICoNIC International Conference</strong>
+                    <span>2025</span>
+                  </div>
+                </div>
+                <div class="cert-item glass">
+                  <div class="cert-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                  <div>
+                    <strong>Project Presentation — PECTEM 2K24</strong>
+                    <span>Showcased an innovative project</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============== CONTACT ============== -->
+      <section class="section section-alt" id="contact">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="kicker">06 — Contact</span>
+            <h2 class="section-title">Let's build something together</h2>
+            <p class="section-sub">
+              Have a project in mind, an internship opportunity, or just want
+              to say hi? My inbox is always open.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-info reveal">
+              <a class="contact-item glass" href="mailto:razeena.aids@gmail.com">
+                <div class="ci-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div>
+                  <span>Email</span>
+                  <strong>razeena.aids@gmail.com</strong>
+                </div>
+              </a>
+              <a class="contact-item glass" href="tel:+919385288326">
+                <div class="ci-icon"><i class="fa-solid fa-phone"></i></div>
+                <div>
+                  <span>Phone</span>
+                  <strong>+91 93852 88326</strong>
+                </div>
+              </a>
+              <a class="contact-item glass" href="https://linkedin.com/in/razeena-r-4400a32aa/" target="_blank" rel="noreferrer">
+                <div class="ci-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                <div>
+                  <span>LinkedIn</span>
+                  <strong>razeena-r</strong>
+                </div>
+              </a>
+              <a class="contact-item glass" href="https://github.com/Razeena-04" target="_blank" rel="noreferrer">
+                <div class="ci-icon"><i class="fa-brands fa-github"></i></div>
+                <div>
+                  <span>GitHub</span>
+                  <strong>Razeena-04</strong>
+                </div>
+              </a>
+            </div>
+
+            <form class="contact-form glass reveal" id="contactForm" novalidate>
+              <div class="field">
+                <label for="cf-name">Your name</label>
+                <input id="cf-name" name="name" type="text" placeholder="e.g. Aarav Sharma" required />
+              </div>
+              <div class="field">
+                <label for="cf-email">Email</label>
+                <input id="cf-email" name="email" type="email" placeholder="you@email.com" required />
+              </div>
+              <div class="field">
+                <label for="cf-message">Message</label>
+                <textarea id="cf-message" name="message" rows="5" placeholder="Tell me about your idea…" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">
+                <i class="fa-solid fa-paper-plane"></i> Send message
+              </button>
+              <p class="form-status" id="formStatus"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============== FOOTER ============== -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="foot-brand">
+          <span class="logo-mark">R</span>
+          <div>
+            <strong>Razeena R</strong>
+            <span>AI &amp; Data Science · Full Stack Developer</span>
+          </div>
+        </div>
+
+        <div class="foot-socials">
+          <a href="https://github.com/Razeena-04" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://linkedin.com/in/razeena-r-4400a32aa/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://hackerrank.com/profile/razeena_aids" target="_blank" rel="noreferrer" aria-label="HackerRank"><i class="fa-brands fa-hackerrank"></i></a>
+          <a href="mailto:razeena.aids@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+
+        <p class="foot-copy">
+          © <span id="year"></span> Razeena R. Crafted with care.
+        </p>
+      </div>
+    </footer>
+
+    <button class="to-top" id="toTop" aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script type="module" src="/src/script.js"></script>
+  </body>
+</html>

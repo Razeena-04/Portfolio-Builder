@@ -2,26 +2,35 @@
 
 ## Overview
 
-pnpm workspace monorepo using TypeScript. Each package manages its own dependencies.
+Personal portfolio website for **Razeena R** — AI & Data Science student and full-stack developer.
+
+Built as a single-page vanilla **HTML / CSS / JavaScript** site (no UI frameworks), inside the pnpm monorepo. Vite is used only as the dev server / static bundler.
 
 ## Stack
 
 - **Monorepo tool**: pnpm workspaces
 - **Node.js version**: 24
 - **Package manager**: pnpm
-- **TypeScript version**: 5.9
-- **API framework**: Express 5
-- **Database**: PostgreSQL + Drizzle ORM
-- **Validation**: Zod (`zod/v4`), `drizzle-zod`
-- **API codegen**: Orval (from OpenAPI spec)
-- **Build**: esbuild (CJS bundle)
+- **Portfolio (`artifacts/portfolio`)**: vanilla HTML, CSS, JS, served via Vite
+- **TypeScript version**: 5.9 (used by other workspace packages, not the portfolio)
+
+## Portfolio features
+
+- 3 themes — Light (default), Dark, Peacock Green — toggled from the navbar dropdown and persisted in `localStorage`
+- Glassmorphism cards, smooth scroll, sticky navbar with active-link highlighting
+- Animated reveal on scroll, animated skill bars, typewriter hero subtitle
+- Project / experience / certification sections built from real data
+- Contact form opens the user's mail client with the message pre-filled
+- "Download Resume" button generates a printable resume page on the fly
+- Fully responsive (mobile + desktop)
+
+## Key files (portfolio)
+
+- `artifacts/portfolio/index.html` — full page markup
+- `artifacts/portfolio/src/style.css` — themes (CSS variables) + all styling
+- `artifacts/portfolio/src/script.js` — theme switcher, animations, form, etc.
 
 ## Key Commands
 
 - `pnpm run typecheck` — full typecheck across all packages
 - `pnpm run build` — typecheck + build all packages
-- `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from OpenAPI spec
-- `pnpm --filter @workspace/db run push` — push DB schema changes (dev only)
-- `pnpm --filter @workspace/api-server run dev` — run API server locally
-
-See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and package details.

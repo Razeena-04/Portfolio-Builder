@@ -1,0 +1,180 @@
+Create a modern, premium personal portfolio website using HTML, CSS, and JavaScript (no frameworks).
+
+---
+
+👤 Personal Details:
+Name: Razeena R
+Title: AI & Data Science Student | Full Stack Developer
+Location: Tenkasi, Tamil Nadu, India
+Email: [razeena.aids@gmail.com](mailto:razeena.aids@gmail.com)
+Phone: +91 9385288326
+
+LinkedIn: https://linkedin.com/in/razeena-r-4400a32aa/
+GitHub: https://github.com/Razeena-04
+HackerRank: https://hackerrank.com/profile/razeena_aids
+
+---
+
+🎯 Design Requirements:
+
+* Clean, modern, premium UI (like top developer portfolios)
+* Fully responsive (mobile + desktop)
+* Smooth scrolling and animations
+* Use attractive fonts (Google Fonts)
+* Use icons (Font Awesome)
+* Section-based layout with navbar
+
+---
+
+🎨 Theme System (IMPORTANT):
+
+Implement 3 themes using CSS variables:
+
+1. Light Theme (default)
+2. Dark Theme
+3. Peacock Green Theme (premium unique look)
+
+Use CSS variables (:root) for:
+--bg-color
+--text-color
+--primary-color
+--secondary-color
+--card-bg
+--button-color
+
+---
+
+🌈 Theme Styles:
+
+Light:
+
+* Background: white/light gray
+* Text: dark
+* Primary: blue
+
+Dark:
+
+* Background: #0f172a
+* Text: #e5e7eb
+* Card: #1e293b
+
+Peacock Green:
+
+* Background: #0f2f2f
+* Primary: #00b894
+* Accent: #00cec9
+* Text: soft light green/white
+* Add slight glow effect for buttons
+
+---
+
+⚙️ Theme Features:
+
+* Add theme switcher in navbar (dropdown or icons)
+* Options: Light / Dark / Peacock
+* Save selected theme in localStorage
+* Theme persists after refresh
+* Smooth transition between themes
+
+---
+
+📌 Sections Required:
+
+1. Hero Section:
+
+* Name + Title
+* Tagline: "Building AI-powered applications and data-driven solutions"
+* Buttons: "View Projects" + "Download Resume"
+
+---
+
+2. About Me:
+
+* Data Science student passionate about AI and web development
+* Experience in Python, Flask, and real-world applications
+
+---
+
+3. Skills:
+   Languages: Python, Java, SQL
+   Web: HTML, CSS, JavaScript
+   Tools: GitHub, VS Code, Jupyter, AWS
+   Concepts: OOP, Data Structures
+
+Display as cards or progress bars
+
+---
+
+4. Projects (as cards with hover effects):
+
+Project 1:
+Title: GoalSplit AI
+Description: AI-powered task decomposition system using Flask and OpenAI API with progress tracking
+Link: https://github.com/Razeena-04/GoalSplit-AI
+
+Project 2:
+Title: Freelancer Dashboard
+Description: Dashboard using Chart.js and Local Storage for tracking earnings
+Link: https://github.com/Razeena-04/freelancer-dashboard
+
+Project 3:
+Title: School Management System
+Description: Java console app using MVC architecture for managing students and teachers
+Link: https://github.com/Razeena-04/SchoolManagementSystem
+
+---
+
+5. Internships:
+
+* Data Science Intern – VCODEZ
+  Worked with Python & Pandas on real-time datasets
+
+* Web Development Intern – Robowaves
+  Built apps using React and Firebase
+
+---
+
+6. Certifications:
+
+* Infosys Springboard (Data Science, Frontend, Java)
+* NPTEL Python (IIT Madras)
+* British Council English (B1)
+
+---
+
+7. Achievements:
+
+* All India Rank in ICAT Exam
+* Paper Presentation at ICoNIC
+* Project Presentation at PECTEM 2K24
+
+---
+
+8. Contact:
+
+* Email, LinkedIn, GitHub
+* Add contact form (Name, Email, Message)
+
+---
+
+✨ Extra Features:
+
+* Sticky navbar
+* Smooth scrolling
+* Hover animations on cards
+* Button ripple/hover effects
+* Glassmorphism effect (especially for Peacock theme)
+* Subtle shadows and rounded corners
+
+---
+
+⚠️ Output Requirements:
+
+* Provide complete working code:
+  index.html
+  style.css
+  script.js
+
+* Clean, well-structured code
+
+* Use comments for clarity
